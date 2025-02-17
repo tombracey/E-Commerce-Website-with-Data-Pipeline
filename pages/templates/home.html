@@ -1,43 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
-      {% block title %}
-      OudEssence
-      {% endblock %}
-    </title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"  rel="stylesheet" />
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#">OudEssence</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Discover Oud</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Our Products</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contact Us</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-    <div class="container">{% block content %}
-      <p>Agarwood, aloeswood, eaglewood, gharuwood or the Wood of Gods, commonly referred to as oud or oudh (from Arabic: عود, romanized: ʿūd, pronounced [ʕuːd]), is a fragrant, dark and resinous wood used in incense, perfume, and small hand carvings.
+{% extends "base.html" %}
+{% load static %}  <!-- ✅ Load static files here -->
 
-        It forms in the heartwood of Aquilaria trees after they become infected with a type of Phaeoacremonium mold, P. parasitica. The tree defensively secretes a resin to combat the fungal infestation. Prior to becoming infected, the heartwood mostly lacks scent, and is relatively light and pale in colouration. However, as the infection advances and the tree produces its fragrant resin as a final option of defense, the heartwood becomes very dense, dark, and saturated with resin. This product is harvested, and most famously referred to in cosmetics under the scent names of oud, oodh or aguru; however, it is also called aloes (not to be confused with the succulent plant genus Aloe), agar (this name, as well, is not to be confused with the edible, algae-derived thickening agent agar agar), as well as gaharu or jinko. With thousands of years of known use, and valued across Muslim, Christian, and Hindu communities (among other religious groups), oud is prized in Middle Eastern and South Asian cultures for its distinctive fragrance, utilized in colognes, incense and perfumes.</p>
-      {% endblock %}</div>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" ></script>
-  </body>
-</html>
- 
+{% block title %} Home Page {% endblock %}
+
+{% block content %}
+<div style="display: flex; justify-content: center;">
+  <img src="{% static 'images/FoA.png' %}" alt="Fragrance of Arabia" width="500">
+</div>
+<p>Oud is quite good for many things. At least, that's what we think.</p>
+{% endblock %}

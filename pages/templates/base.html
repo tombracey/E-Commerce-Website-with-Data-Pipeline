@@ -1,0 +1,111 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      {% block title %} Django App {% endblock %}
+    </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+
+    <style>
+      /* Center logo and make it larger */
+      .logo-container {
+          text-align: center;
+          padding: 20px 0;
+      }
+      .logo-container img {
+          height: 200px; /* Adjust size as needed */
+      }
+
+      /* Navbar styling */
+      .navbar {
+          border-top: 2px solid #ddd;
+          padding: 10px 0;
+      }
+
+      /* Product styles */
+      .products {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 20px;
+          justify-content: center;
+          padding: 20px;
+      }
+
+      .product {
+          border: 1px solid #ccc;
+          border-radius: 10px;
+          padding: 20px;
+          width: 200px;
+          text-align: center;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .product img {
+          max-width: 100%;
+          height: auto;
+          border-radius: 8px;
+      }
+
+      .product h2 {
+          font-size: 1.2rem;
+          margin-bottom: 10px;
+      }
+
+      .product p {
+          font-size: 1rem;
+          color: #555;
+          margin-bottom: 10px;
+      }
+
+      .product .price {
+          font-weight: bold;
+          font-size: 1.1rem;
+          color: #2d2d2d;
+      }
+    </style>
+  </head>
+  <body>
+
+    <!-- Large Logo at the Top -->
+    <div class="logo-container">
+        <img src="{% static 'images/logo.png' %}" alt="OudEssence Logo">
+    </div>
+
+    <!-- Navbar Below -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Discover Oud</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Our Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+      {% block content %}
+      {% endblock %}
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
