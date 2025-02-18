@@ -20,3 +20,12 @@ class Product(models.Model):
 
 #     def __str__(self):
 #         return self.first_name + " " + self.last_name
+    
+class ContactUs(models.Model):
+    name = models.CharField(max_length=60)
+    email = models.EmailField()
+    message = models.TextField()
+
+    def __str__(self):
+        return f"Message from {self.name}"
+

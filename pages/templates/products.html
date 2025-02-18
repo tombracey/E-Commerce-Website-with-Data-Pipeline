@@ -5,14 +5,14 @@
 {% endblock %}
 
 {% block content %}
-    <h1>Our Products</h1>
+    <h2>Our Products</h2>
 
     <div class="products">
         {% for product in products %}
             <div class="product">
                 <h2>{{ product.name }}</h2>
                 <p>{{ product.description }}</p>
-                <p class="price">${{ product.price }}</p>
+                <p class="price">£{{ product.price }}</p>
                 {% if product.image %}
                     <img src="{{ product.image.url }}" alt="{{ product.name }}">
                 {% endif %}

@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% load static %}  <!-- ✅ Load static files here -->
+{% load static %}
 
 {% block title %} Home Page {% endblock %}
 
@@ -7,5 +7,60 @@
 <div style="display: flex; justify-content: center;">
   <img src="{% static 'images/FoA.png' %}" alt="Fragrance of Arabia" width="500">
 </div>
-<p>Oud is quite good for many things. At least, that's what we think.</p>
+<h4>Phenomenal Fragrances</h4>
+<p>Our products derive from the finest agarwood in South East Asia.</p>
+<h4>Everyday Prices</h4>
+<p>We aim to offer the best prices so that luxury fragrances are accessible to all.</p>
+<h4>Sustainably Sourced</h4>
+<p>Our commitment to sustainability is central. We are registered under CITES to ensure responsible sourcing.</p>
+
+<!-- Flexboxes with links -->
+<div style="display: flex; justify-content: space-around; padding: 40px 0;">
+  
+  <!-- Our Products Box -->
+  <div style="flex: 1; text-align: center; padding: 20px;">
+    <a href="{% url 'products' %}" style="text-decoration: none; color: inherit;">
+      <div style="border: 1px solid #ddd; padding: 20px; border-radius: 8px;">
+        <h4>Order Now</h4>
+        <p>Find the product for you.</p>
+      </div>
+    </a>
+  </div>
+  
+  <!-- Discover Oud Box -->
+  <div style="flex: 1; text-align: center; padding: 20px;">
+    <a href="{% url 'discover_oud' %}" style="text-decoration: none; color: inherit;">
+      <div style="border: 1px solid #ddd; padding: 20px; border-radius: 8px;">
+        <h4>Learn More</h4>
+        <p>Learn about the unique essence of Oud and how it is enjoyed.</p>
+      </div>
+    </a>
+  </div>
+  
+  <!-- Contact Us Box -->
+  <div style="flex: 1; text-align: center; padding: 20px;">
+    <a href="{% url 'contact_us' %}" style="text-decoration: none; color: inherit;">
+      <div style="border: 1px solid #ddd; padding: 20px; border-radius: 8px;">
+        <h4>Contact Us</h4>
+        <p>Get in touch for inquiries, support or questions.</p>
+      </div>
+    </a>
+  </div>
+
+</div>
+
+
+<footer class="footer">
+  <!-- Credibility logos (Royal Mail, Trustpilot, CITES) -->
+  <div>
+    <img src="{% static 'images/cites.jpg' %}" alt="CITES Logo">
+    <img src="{% static 'images/trustpilot.png' %}" alt="Trustpilot Logo">
+    <img src="{% static 'images/royal_mail.png' %}" alt="Royal Mail Logo">
+  </div>
+
+  <!-- Company Registration Information -->
+  <div class="company-info">
+    <p>© 2025 Copyright | Oud Essence Ltd, registered at company no. 123456789 | All Rights Reserved.</p>
+  </div>
+</footer>
 {% endblock %}
