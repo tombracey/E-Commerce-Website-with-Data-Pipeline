@@ -12,6 +12,9 @@
             <div class="product">
                 <h2>{{ product.name }}</h2>
                 <p>{{ product.description }}</p>
+                <h4>0</h4>
+                <button class="increase">+</button>
+                <button class="decrease">-</button>
                 <p class="price">£{{ product.price }}</p>
                 {% if product.image %}
                     <img src="{{ product.image.url }}" alt="{{ product.name }}">
@@ -21,4 +24,10 @@
             <p>We have just sold out! New stock will be added soon.</p>
         {% endfor %}
     </div>
+{% endblock %}
+
+{% load static %}
+
+{% block extra_js %}
+<script src="{% static 'js/cart_incrementer.js' %}"></script>
 {% endblock %}
