@@ -1,6 +1,6 @@
 Work-in-progress!
 
-E-commerce website with a sales pipeline for an imaginary company (at the moment) selling oud products. I started this project mainly to get practice in:
+E-commerce website with a sales pipeline for an imaginary company (at the moment) selling oud products. I started this project to get practice in:
 - Web development
 - ETL pipelines
 - Terraform for cloud IaC
