@@ -14,10 +14,8 @@
 <h4>Sustainably Sourced</h4>
 <p>Our commitment to sustainability is central. We are registered for exports and imports under CITES to ensure responsible sourcing.</p>
 
-<!-- Flexboxes with links -->
 <div style="display: flex; justify-content: space-around; padding: 40px 0;">
   
-  <!-- Our Products Box -->
   <div style="flex: 1; text-align: center; padding: 20px;">
     <a href="{% url 'products' %}" style="text-decoration: none; color: inherit;">
       <div style="border: 1px solid #ddd; padding: 20px; border-radius: 8px;">
@@ -27,7 +25,6 @@
     </a>
   </div>
   
-  <!-- Discover Oud Box -->
   <div style="flex: 1; text-align: center; padding: 20px;">
     <a href="{% url 'discover_oud' %}" style="text-decoration: none; color: inherit;">
       <div style="border: 1px solid #ddd; padding: 20px; border-radius: 8px;">
@@ -37,7 +34,6 @@
     </a>
   </div>
   
-  <!-- Contact Us Box -->
   <div style="flex: 1; text-align: center; padding: 20px;">
     <a href="{% url 'contact_us' %}" style="text-decoration: none; color: inherit;">
       <div style="border: 1px solid #ddd; padding: 20px; border-radius: 8px;">
@@ -51,14 +47,12 @@
 
 
 <footer class="footer">
-  <!-- Credibility logos (Royal Mail, Trustpilot, CITES) -->
   <div>
     <img src="{% static 'images/cites.jpg' %}" alt="CITES Logo">
     <img src="{% static 'images/trustpilot.png' %}" alt="Trustpilot Logo">
     <img src="{% static 'images/royal_mail.png' %}" alt="Royal Mail Logo">
   </div>
 
-  <!-- Company Registration Information -->
   <div class="company-info">
     <p>© 2025 Copyright | Oud Essence Ltd, registered in England and Wales at company no. 123456789 | All Rights Reserved.</p>
   </div>
