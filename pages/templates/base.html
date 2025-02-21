@@ -6,48 +6,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
-      {% block title %} Django App {% endblock %}
+      {% block title %} Oud Essence {% endblock %}
     </title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
-    {% block styles %}{% endblock %}
-
-    <style>
-      .logo-container {
-          text-align: center;
-          padding: 20px 0;
-      }
-      .logo-container img {
-          height: 200px;
-      }
-
-      .navbar {
-    border-top: 2px solid #ddd;
-    padding: 10px 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    padding-left: 0;
-}
-      .footer {
-        background-color: #f8f9fa;
-        padding: 40px 0;
-        text-align: center;
-        font-size: 0.9rem;
-      }
-
-      .footer img {
-        height: 50px;
-        margin: 0 20px;
-      }
-
-      .footer .company-info {
-        margin-top: 20px;
-        font-size: 1rem;
-        color: #555;
-      }
-    </style>
+    <link rel="stylesheet" href="{% static 'css/logo_banner.css' %}">
+    <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
   </head>
+
   <body>
 
     <div class="logo-container">

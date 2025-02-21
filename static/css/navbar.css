@@ -1,0 +1,9 @@
+.navbar {
+    border-top: 2px solid #ddd;
+    padding: 5px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-left: 0;
+}

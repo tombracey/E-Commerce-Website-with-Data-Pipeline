@@ -1,0 +1,17 @@
+.footer {
+    background-color: #f8f9fa;
+    padding: 40px 0;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+
+  .footer img {
+    height: 50px;
+    margin: 0 20px;
+  }
+
+  .footer .company-info {
+    margin-top: 20px;
+    font-size: 1rem;
+    color: #555;
+  }

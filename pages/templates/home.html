@@ -3,6 +3,10 @@
 
 {% block title %} Home Page {% endblock %}
 
+{% block styles %}
+  <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+{% endblock %}
+
 {% block content %}
 <div style="display: flex; justify-content: center;">
   <img src="{% static 'images/FoA.png' %}" alt="Fragrance of Arabia" width="500">
